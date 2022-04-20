@@ -13,8 +13,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#333;
-    color:white;
+    background-color:rgb(219, 54, 105);
+    color:rgb(13, 12, 12);
 }
 
 .brand-title {
@@ -34,13 +34,13 @@ body {
 
 .navbar-links li a {
     text-decoration: none;
-    color: white;
+    color: rgb(8, 8, 8);
     padding: 1rem;
     display: block;
 }
 
 .navbar-links li:hover {
-    background-color: #555;
+    background-color: rgb(250, 249, 246);
 
 }
 
