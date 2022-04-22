@@ -6,40 +6,11 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 
-    <title>Expenses</title>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" -->
-    <!-- integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
-    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
-    <!-- <script src=”https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js”></script&gt; -->
-
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load("current", { packages: ["corechart"] });
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['College Fee', 11],
-                ['Laundry', 2],
-                ['Grocery', 2],
-                ['Food', 2],
-                ['Bills', 7]
-            ]);
-
-            var options = {
-                title: 'Expenditure Tracker',
-                is3D: true,
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-            chart.draw(data, options);
-        }
-    </script>
+    <title>Expenses</title>  
 </head>
 
 <body>
-    <nav class="navbar">
+    <!-- <nav class="navbar">
         <div class="brand-title">Expenses</div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
@@ -51,16 +22,53 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Compose</a></li>
                 <li><a href="#">Blogs</a></li>
-                <li><a href="calendar.html">My Activity</a></li>
+             <li><a href="calendar.html">My Activity</a></li>
             </ul>
 
         </div>
-    </nav>
+    </nav> -->
 
-    <div class="class">
-        <div id="piechart_3d" class="chart" style="width: 900px; height: 500px;"></div>
+    <h2>Expense Tracker</h2>
+    <div class="container">
+        <h4>Your Balance</h4>
+        <h1 id="balance">&#8377;0.0</h1>
+        <div class="inc-exp-container">
+            <div>
+                <h4>INCOME</h4>
+                <p id="money-plus" class="money-plus">
+                    +&#8377;0.0
+                </p>
+            </div>
+            <div>
+                <h4>EXPENSE</h4>
+                <p id="money-minus" class="money-minus">
+                    -&#8377;0.0
+                </p>
+            </div>
+        </div>
+
+        <h3>History</h3>
+        <ul id="list" class="list">
+            <li class="minus">
+                Cash <span>-&#8377;400</span><button class="delete-btn">x</button>
+            </li>
+        </ul>
+
+        <h3>Add New Transaction</h3>
+        <form id="form">
+            <div class="form-control">
+                <label for="Text">Text</label>
+                <input type="text" id="text" placeholder="Enter Text...">
+            </div>
+            <div class="form-control">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="Enter Amount...">
+            </div>
+            <button class="btn">All Transactions</button>
+        </form>
     </div>
 
+   
 
 </body>
 
